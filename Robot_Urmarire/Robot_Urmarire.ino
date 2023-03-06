@@ -1,6 +1,6 @@
 #include <Pixy2.h>
 #define DELTA 25
-#define MIN_SPEED_VAL 100
+#define MIN_SPEED_VAL 60
 #define K 1
 
 #define min_width 70
@@ -12,12 +12,12 @@
 
 #define min_x 150
 #define normal_x 165
-#define max_x 180
+#define max_x 190
 
 #define min_x_working_spectrum 20  // min left position of x
 #define max_x_working_spectrum 316 // max left position of x
 
-#define speed_value 160 
+#define speed_value 100 
 
 #define pin_en_a 9            // roata Dreapta
 #define pin_en_b 10           // roata Stanga
@@ -44,7 +44,7 @@ int D_W[] = {0,   20,  30,  40,  60,   min_width,          max_width,   190,  24
 int D_X[] = {0,   15,  40,  65,  90,    min_x,               max_x,     220,  250, 275, 316};
 
 int R_W[] = {255, 255, 225, 200, 175,  MIN_SPEED_VAL,    MIN_SPEED_VAL,   120,  130,   140, 150};
-int R_X[] = {255,  230,  200,  180,  150,  MIN_SPEED_VAL,    MIN_SPEED_VAL,   150,  180,   200,  255};
+int R_X[] = {255,  175,  145,  135,  85,  MIN_SPEED_VAL,    MIN_SPEED_VAL,   85,  135,   145,  255};
 
 int filterExpMovingAverage(int value, bool isWidth) {
   static int filteredValueWidth = 0;
